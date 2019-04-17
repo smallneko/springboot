@@ -1,0 +1,18 @@
+
+spring:
+  datasource:
+    #连接MySQL
+    url: jdbc:sqlserver://localhost:1433;DatabaseName=CIS
+    username: sa
+    password: hy12345678
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+mybatis:
+  configuration:
+    #配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    #打印SQL信息
+    com.macro.adient.mapper: debug
