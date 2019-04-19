@@ -7,6 +7,10 @@ spring:
     password: hy12345678
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .jsp
+
 mybatis:
   configuration:
     #配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
