@@ -21,4 +21,13 @@ public class ClientController {
 		}
 	}
 
+	@RequestMapping(value = "findAllClient", method = RequestMethod.GET)
+	public R findAllClient(){
+		try {
+			return R.isOk().data(clientService.findAllClient());
+		}catch (Exception e){
+			return R.isFail(e);
+		}
+	}
+
 }

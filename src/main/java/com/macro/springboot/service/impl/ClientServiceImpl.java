@@ -21,4 +21,9 @@ public class ClientServiceImpl implements ClientService {
 	public Client findClientById(String clientId) {
 		return clientMapper.findClientById(clientId);
 	}
+
+	@Override
+	public List<Client> findAllClient(){
+		return clientMapper.findAllClient();
+	}
 }

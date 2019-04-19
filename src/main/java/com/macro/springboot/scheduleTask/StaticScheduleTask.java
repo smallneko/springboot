@@ -22,8 +22,10 @@ public class StaticScheduleTask {
 	//或直接指定时间间隔，例如：5秒
 	//@Scheduled(fixedRate=5000)
 	private void configureTasks() {
-		System.err.println("执行静态定时任务时间: " + LocalDateTime.now());
-		logger.info("Logger方法测试");
+		StringBuffer sb = new StringBuffer();
+		sb.append("定时任务Logger方法测试============:");
+		sb.append(LocalDateTime.now());
+		logger.info(sb.toString());
 	}
 
 }
