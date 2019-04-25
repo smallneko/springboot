@@ -1,7 +1,6 @@
 package com.macro.springboot.controller;
 
 import com.macro.springboot.entity.Client;
-import com.macro.springboot.entity.User;
 import com.macro.springboot.service.ClientService;
 import com.macro.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +20,7 @@ public class SingleViewController {
 	@Autowired
 	UserService userService;
 
+	// Index页面返回方式
 	@RequestMapping(value = "index", method = RequestMethod.GET)
 	public String index(Model model){
 		List<Client> clientList = clientService.findAllClient();
