@@ -12,6 +12,9 @@ public class ClientController {
 	@Autowired
 	ClientService clientService;
 
+	/*
+	 * findClientById/{clientId}
+	 * */
 	@RequestMapping(value = "findClient/{clientId}", method = RequestMethod.GET)
 	public R findClientById(@PathVariable("clientId") String clientId) {
 		try {
@@ -24,8 +27,20 @@ public class ClientController {
 	@RequestMapping(value = "findAllClient", method = RequestMethod.GET)
 	public R findAllClient(){
 		try {
-			return R.isOk().data(clientService.findAllClient());
+			return R.isOk().data(clientService.findAllClient()).total(clientService.getCount());
 		}catch (Exception e){
+			return R.isFail(e);
+		}
+	}
+
+	/*
+	* findClientById?clientId={clientId}
+	* */
+	@RequestMapping(value = "findClientById",method = RequestMethod.GET)
+	public R findClientByClientId(@RequestParam("clientId") String clientId){
+		try {
+			return R.isOk().data(clientService.findClientById(clientId));
+		} catch (Exception e) {
 			return R.isFail(e);
 		}
 	}

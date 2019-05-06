@@ -37,4 +37,9 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 		return mapper.deleteByPrimaryKey(entity);
 	}
 
+	@Override
+	public int getCount(T entity){
+		return mapper.selectCount(entity);
+	}
+
 }

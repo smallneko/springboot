@@ -1,6 +1,7 @@
 package com.macro.springboot.mapper;
 
 import com.macro.springboot.entity.User;
+import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

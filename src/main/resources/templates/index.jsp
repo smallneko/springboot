@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>jsp测试</title>
+        <title>测试</title>
         <script type="text/javascript" src="../static/jquery-3.4.0.js"></script>
     </head>
     <body>

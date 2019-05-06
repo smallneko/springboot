@@ -26,4 +26,9 @@ public class ClientServiceImpl implements ClientService {
 	public List<Client> findAllClient(){
 		return clientMapper.findAllClient();
 	}
+
+	@Override
+	public int getCount(){
+		return  clientMapper.getCount();
+	}
 }

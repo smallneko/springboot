@@ -10,4 +10,6 @@ public interface ClientService {
 
 	List<Client> findAllClient();
 
+	int getCount();
+
 }

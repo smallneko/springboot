@@ -19,4 +19,6 @@ public interface BaseService<T> {
 
 	int delete(T entity);
 
+	int getCount(T entity);
+
 }

@@ -12,6 +12,7 @@ public class R<T> implements Serializable {
 	private T data; //服务端数据
 	private int status = OK; //状态码
 	private String msg = ""; //描述信息
+	private int total = 0; //条目数
 
 	//APIS
 	public static R isOk(){
@@ -33,6 +34,10 @@ public class R<T> implements Serializable {
 	}
 	public R status(int status){
 		this.setStatus(status);
+		return this;
+	}
+	public R total(int total){
+		this.setTotal(total);
 		return this;
 	}
 
@@ -65,6 +70,14 @@ public class R<T> implements Serializable {
 
 	public void setData(T data) {
 		this.data = data;
+	}
+
+	public int getTotal(){
+		return total;
+	}
+
+	public void setTotal(int total){
+		this.total = total;
 	}
 }
 

@@ -14,4 +14,7 @@ public interface ClientMapper {
 	@Select("select * from [Client] where 1=1")
 	List<Client> findAllClient();
 
+	@Select("select COUNT(*) as total from [Client]")
+	int getCount();
+
 }
